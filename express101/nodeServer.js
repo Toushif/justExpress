@@ -18,6 +18,8 @@ const server = http.createServer((req, res)=>{
         // 1. start-line - CHECK
         // 2. header
         // 3. body
+        //check https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/ for details on http anatomy
+        //to modify res header we use writeHead method - 
         // writeHead takes 2 args:
         // 1. status code
         // 2. object for the mime-type
@@ -46,4 +48,4 @@ const server = http.createServer((req, res)=>{
 // createServer returns an object with a listen method
 // listen takes 1 arg:
 // 1. port to listen for http traffic on
-server.listen(3000);
+server.listen(3000);//this server is listening to traffc (http traffic) on this port number.

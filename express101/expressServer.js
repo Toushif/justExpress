@@ -9,6 +9,8 @@ const path = require('path');
 const express = require('express');
 // An "app" is the express function (createAppliction inside the Express module)
 // invoked and is an Express appliction
+//"app" here below is the express function (createApplication function inside the Express module - go to express folder in node_modules - indexjs -> express.js)
+//when invoked it returns an object with a lot of methods to access from 
 const app = express();
 
 // serve up static files! Only 1 line... take that nodejs
