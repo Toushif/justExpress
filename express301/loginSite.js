@@ -77,7 +77,7 @@ app.get('/welcome',(req, res, next)=>{
 // app.param() - takes 2 args:
 // 1. param to look for in the route
 // 2. the callback to run (with the usuals)
-app.param('id',(req, res, next, id)=>{
+app.param('blogId',(req, res, next, id)=>{
     console.log("Params called:" ,id);
     // if id has something to do with stories...
     // if id has something to do with blog...
@@ -93,7 +93,7 @@ app.param('id',(req, res, next, id)=>{
 app.get('/story/:id',(req, res, next)=>{
     // the req.params object always exists
     // it will have a property for each wildcard in the route
-    res.send(`<h1>Story ${req.params.storyId}</h1>`)
+    res.send(`<h1>Story ${req.params.id}</h1>`)
     // res.send('<h1>Story 1</h1>')
 })
 
@@ -102,7 +102,7 @@ app.get('/story/:id',(req, res, next)=>{
 // app.get('/story/:blogId',(req, res, next)=>{
 //     // the req.params object always exists
 //     // it will have a property for each wildcard in the route
-//     res.send(`<h1>Story ${req.params.storyId}</h1>`)
+//     res.send(`<h1>Stories ${req.params.blogId}</h1>`)
 //     // res.send('<h1>Story 1</h1>')
 // })
 
