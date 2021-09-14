@@ -4,8 +4,9 @@
       <a class="navbar-brand" href="/">The New IMDB</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/login">Login with GitHub</a></li>
-      <li><a href="/favorites">Favorites</a></li>
+      <li class="<%= user ? 'username' : '' %>"><a href="/login"><%= user ? ('Hi ' + user.username + '!') : 'Login with GitHub' %></a></li>
+      <li><a href="/popular">Most Popular</a></li>
+      <li><a href="/favorites"><%= user ? ('Favorites') : '' %></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>

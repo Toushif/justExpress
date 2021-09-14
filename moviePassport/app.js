@@ -24,8 +24,12 @@ app.use(session({
 }))
 app.use(passport.initialize());
 app.use(passport.session());
-const passportConfig = require('./config')
-passport.use(new GitHubStrategy(passportConfig,
+// const passportConfig = require('./config')
+passport.use(new GitHubStrategy({
+  clientID: process.env.clientID,
+  clientSecret: process.env.clientSecret,
+  callbackURL: process.env.callbackURL
+},
 function(accessToken, refreshToken, profile, cb) {
   // console.log(profile);
   return cb(null, profile);
